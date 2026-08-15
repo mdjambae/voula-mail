@@ -1,0 +1,81 @@
+<svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace">
+  <!-- background -->
+  <rect x="0" y="0" width="560" height="300" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="560" height="40" rx="14" fill="#161b22"/>
+  <rect x="0" y="26" width="560" height="14" fill="#161b22"/>
+  <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="20" r="6" fill="#27c93f"/>
+  <text x="90" y="25" font-size="13" fill="#8b949e">audit@yourcompany.com — live scan</text>
+
+  <!-- master timeline driver (invisible) -->
+  <rect x="0" y="0" width="1" height="1" opacity="0">
+    <animate id="master" attributeName="opacity" from="1" to="1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- rows -->
+  <g font-size="14">
+    <!-- SPF -->
+    <g opacity="0">
+      <animate begin="master.begin+0.25s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="75" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="75" fill="#8B8AFB" font-weight="bold">SPF</text>
+      <text x="130" y="75" fill="#c9d1d9">v=spf1 include:_spf.yourcompany.com -all</text>
+    </g>
+
+    <!-- DKIM -->
+    <g opacity="0">
+      <animate begin="master.begin+0.85s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="107" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="107" fill="#8B8AFB" font-weight="bold">DKIM</text>
+      <text x="130" y="107" fill="#c9d1d9">selector1._domainkey → RSA 2048-bit key</text>
+    </g>
+
+    <!-- DMARC -->
+    <g opacity="0">
+      <animate begin="master.begin+1.45s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="139" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="139" fill="#8B8AFB" font-weight="bold">DMARC</text>
+      <text x="130" y="139" fill="#c9d1d9">p=reject; rua=mailto:dmarc@yourcompany.com</text>
+    </g>
+
+    <!-- DNSSEC -->
+    <g opacity="0">
+      <animate begin="master.begin+2.05s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="171" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="171" fill="#8B8AFB" font-weight="bold">DNSSEC</text>
+      <text x="130" y="171" fill="#c9d1d9">AD=1 → chain of trust validated</text>
+    </g>
+
+    <!-- MTA-STS -->
+    <g opacity="0">
+      <animate begin="master.begin+2.65s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="203" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="203" fill="#8B8AFB" font-weight="bold">MTA-STS</text>
+      <text x="130" y="203" fill="#c9d1d9">mode: enforce</text>
+    </g>
+
+    <!-- BIMI -->
+    <g opacity="0">
+      <animate begin="master.begin+3.25s" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="235" fill="#3fb950" font-weight="bold">✓</text>
+      <text x="52" y="235" fill="#8B8AFB" font-weight="bold">BIMI</text>
+      <text x="130" y="235" fill="#c9d1d9">brand logo published</text>
+    </g>
+
+    <!-- score line -->
+    <g opacity="0">
+      <animate begin="master.begin+4.0s" attributeName="opacity" from="0" to="1" dur="0.25s" fill="freeze"/>
+      <animate begin="master.begin+5.3s" attributeName="opacity" to="0" dur="0.2s" fill="freeze"/>
+      <text x="28" y="270" fill="#e6edf3" font-weight="bold">Score: 100/100 — Excellent</text>
+    </g>
+  </g>
+</svg>

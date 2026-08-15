@@ -1,0 +1,23 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.local
+.DS_Store
+npm-debug.log*
+
+# Config d'outillage locale (permissions Claude Code propres à cette machine)
+.claude/settings.local.json
+
+# Données personnelles de prospection (e-mails/domaines clients, résultats de scan)
+domaines.txt
+resultats-scan.csv
+/????-??-??-entreprises-*.csv
+/????-??-??-contacts-*.csv
+/????-??-??-resultats-scan-*.csv
+emails-*.txt
+relances*.txt
+test-emails.txt
+test-tri/
+test-tri2/
