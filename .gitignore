@@ -7,8 +7,8 @@ dist-ssr
 .DS_Store
 npm-debug.log*
 
-# Config d'outillage locale (permissions Claude Code propres à cette machine)
-.claude/settings.local.json
+# Config d'outillage locale (Claude Code, propre à cette machine)
+.claude/
 
 # Données personnelles de prospection (e-mails/domaines clients, résultats de scan)
 domaines.txt
